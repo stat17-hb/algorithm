@@ -1,13 +1,19 @@
+#%%
 # 데이터 읽기
+import os
 import sys
 from collections import deque
 from itertools import combinations
 
+os.chdir("E:/OneDrive - 고려대학교/석사/알고리즘/연구소")
+#sys.stdin = open("ex1.txt", "r")
+sys.stdin = open("test.txt", "r")
 nrow, ncol = list(map(int, sys.stdin.readline().split()))
 X = []
 for _ in range(nrow):
     X.append(list(map(int, sys.stdin.readline().split())))
-
+sys.stdin.close()
+#%%
 # 바이러스 위치 확인
 virus_set = set()
 for row in range(nrow):
